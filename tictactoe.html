@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            border: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            font-family: 'Poppins', sans-serif;
+            background-color: navy;
+        }
+        #layer1{
+            list-style-type: none;
+            margin:0px;
+            padding:0px;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+        #layer1 .layerBox{
+            width: 100px;
+            height: 100px;
+            border: solid white;
+            font-size:5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TIC-TAC-TOE</h1>
+        <ul id="layer1">
+            <li class="layerBox" id="bord1"></li>
+            <li class="layerBox" id="bord2"></li>
+            <li class="layerBox" id="bord3"></li>
+            <li class="layerBox" id="bord4"></li>
+            <li class="layerBox"></li>
+            <li class="layerBox" id="bord5"></li>
+            <li class="layerBox" id="bord6"></li>
+            <li class="layerBox" id="bord7"></li>
+            <li class="layerBox" id="bord8"></li>
+        </ul>
+    </div>
+    <script>
+        const layer1 = document.querySelector("#layer1");
+        var i = 0
+        layer1.addEventListener("click",function(e){
+        
+            if (e.target.matches(".layerBox")){
+                if (i%2==0){
+                    e.target.innerText = 'X'
+                    e.target.style.color = 'orange'
+                    i++
+                    
+                }
+                else{
+                    e.target.innerText ="O"
+                    e.target.style.color = 'lightgreen'
+                    i++
+                    
+                }
+            switch(i){
+                case 5:
+                    var k = document.querySelectorAll(".layerBox")
+                    function cal(){
+                        if(k[0].innerText == "X" && k[1].innerText == "X" && k[2].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[1].innerText == "O" && k[2].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "X" && k[4].innerText == "X" && k[5].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "O" && k[4].innerText == "O" && k[5].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "X" && k[7].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "O" && k[7].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "X" && k[4].innerText == "X" && k[7].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "O" && k[4].innerText == "O" && k[7].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[4].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[4].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[4].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[4].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[3].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[3].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[5].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[5].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                    }
+                    cal()
+                    break
+
+                case 6:
+                    var k = document.querySelectorAll(".layerBox")
+                    function cal2(){
+                        if(k[0].innerText == "X" && k[1].innerText == "X" && k[2].innerText == "X"){
+                               alert("player X win")
+                               i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[1].innerText == "O" && k[2].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "X" && k[4].innerText == "X" && k[5].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "O" && k[4].innerText == "O" && k[5].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "X" && k[7].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "O" && k[7].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "X" && k[4].innerText == "X" && k[7].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "O" && k[4].innerText == "O" && k[7].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[4].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[4].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[4].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[4].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[3].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[3].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[5].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[5].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        }
+                        cal2()
+                        break
+
+                case 7:
+                    var k = document.querySelectorAll(".layerBox")
+                    function cal3(){
+                        if(k[0].innerText == "X" && k[1].innerText == "X" && k[2].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[1].innerText == "O" && k[2].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "X" && k[4].innerText == "X" && k[5].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "O" && k[4].innerText == "O" && k[5].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "X" && k[7].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "O" && k[7].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "X" && k[4].innerText == "X" && k[7].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "O" && k[4].innerText == "O" && k[7].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[4].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[4].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[4].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[4].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[3].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[3].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[5].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[5].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        }
+                        cal3()
+                        break
+
+                case 8:
+                    var k = document.querySelectorAll(".layerBox")
+                    function cal4(){
+                        if(k[0].innerText == "X" && k[1].innerText == "X" && k[2].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[1].innerText == "O" && k[2].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "X" && k[4].innerText == "X" && k[5].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "O" && k[4].innerText == "O" && k[5].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "X" && k[7].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "O" && k[7].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "X" && k[4].innerText == "X" && k[7].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "O" && k[4].innerText == "O" && k[7].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[4].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[4].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[4].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[4].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[3].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[3].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[5].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[5].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        }
+                        cal4()
+                        break
+                case 9:
+                    var k = document.querySelectorAll(".layerBox")
+                    function cal5(){
+                        if(k[0].innerText == "X" && k[1].innerText == "X" && k[2].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[1].innerText == "O" && k[2].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "X" && k[4].innerText == "X" && k[5].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[3].innerText == "O" && k[4].innerText == "O" && k[5].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "X" && k[7].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[6].innerText == "O" && k[7].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "X" && k[4].innerText == "X" && k[7].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[1].innerText == "O" && k[4].innerText == "O" && k[7].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[4].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[4].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[4].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[4].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "X" && k[3].innerText == "X" && k[6].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[0].innerText == "O" && k[3].innerText == "O" && k[6].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "X" && k[5].innerText == "X" && k[8].innerText == "X"){
+                                alert("player X win")
+                                i+=10
+                        }
+                        else if(k[2].innerText == "O" && k[5].innerText == "O" && k[8].innerText == "O"){
+                                alert("player O win")
+                                i+=10
+                        }
+                        else{
+                            alert("Draw")
+                        }
+                        }
+                        cal5()
+                        break
+            }
+            console.log(i)
+            }
+           
+        })
+        
+    </script>
+</body>
+</html>
